@@ -60,7 +60,8 @@
     </table>
     <script src="js/app/models/Negociacao.js"></script>
     <script>
-        const n1 = new Negociacao(new Date(), 100, 10)
+        var n1 = new Negociacao(new Date(), 100, 10)
+        Object.freeze(n1)
     </script>
 </body>
 </html>
