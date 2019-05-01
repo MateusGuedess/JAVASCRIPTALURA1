@@ -8,8 +8,8 @@ class Negociacao {
     Object.freeze(this)
   }
 
-  get Volume() {
-    return this.quantidade * this.valor
+  get volume() {
+    return this._quantidade * this._valor
   }
 
   get Data() {
