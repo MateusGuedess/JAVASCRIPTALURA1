@@ -12,15 +12,22 @@ class NegociacaoController {
   adiciona(event) {
     event.preventDefault();
 
-
-
+    let data = new Date(...
+      this._inputData.value.split('-').map( (item, index) => index === 1 ? item-1 : item)
+    )
+    
     let negociacao = new Negociacao(
-      DateHelper.textoParaData(this._inputData.value),
+      data,
       this._inputQuantidade.value,
       this._inputValor.value
     )
-      console.log(DateHelper.dataParaTexto(negociacao.Data))
-    this.limparCampos()
+    
+      // let diaMesAno = negociacao.data.getDate() 
+      // + '/' +  negociacao.data.getMonth() 
+      // + '/' + negociacao.data.getFullYear()
+
+    console.log(negociacao.data)
+    //this.limparCampos()
   }
 
   limparCampos() {

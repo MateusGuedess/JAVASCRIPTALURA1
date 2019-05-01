@@ -12,7 +12,7 @@ class Negociacao {
     return this.quantidade * this.valor
   }
 
-  get Data() {
+  get data() {
     return new Date(this._data.getTime())
   }
 
